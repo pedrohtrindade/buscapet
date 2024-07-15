@@ -1,0 +1,259 @@
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+<link rel="stylesheet" href="style.css">
+<script>
+$("input.variation").on("click", function () {
+	if ($(this).val() > 3) {
+		$("body").css("background", "#111");
+		$("footer").attr("class", "dark");
+	} else {
+		$("body").css("background", "#f9f9f9");
+		$("footer").attr("class", "");
+	}
+});
+
+$(".option__button").on("click", function () {
+	$(".option__button").removeClass("selected");
+	$(this).addClass("selected");
+	if ($(this).hasClass("option--grid")) {
+		$(".results-section").attr("class", "results-section results--grid");
+	} else if ($(this).hasClass("option--list")) {
+		$(".results-section").attr("class", "results-section results--list");
+	}
+});
+</script>
+<input class="variation" id="bluepurple" type="radio" value="1" name="color" checked="checked"/>
+<head>
+
+</head>
+<body>
+  <header>
+    <nav class="navbar navbar-expand-md navbar-light fixed-top">
+      <div class="flex-container">
+        <a href="principal.html" class="navbar-transparente">
+          <img src="assets/imagens/BuscaPet7.svg" width="142" />
+      </a>
+      </div>
+      <div class="container">          
+          <button class="navbar-toggler" data-toggle="collapse" data-target="#nav-principal">
+              <i class="fas fa-bars text-white"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="nav-principal">
+              <ul class="navbar-nav ml-auto">
+                  <li class="nav-item">
+                      <a href="" class="nav-link">Perdi meu pet</a>
+                  </li>
+                  <li class="nav-item">
+                      <a href="adotecao.html" class="nav-link">Doações</a>
+                  </li>
+                  <li class="nav-item">
+                      <a href="" class="nav-link">Email</a>
+                  </li>
+                  <li class="">
+                  </li>
+                  <li class="nav-item">
+                      <a href="" class="nav-link"></a>
+                  </li>
+                  <li class="nav-item">
+                      <a href="" class="nav-link"></a>
+                  </li>
+              </ul>
+          </div>
+      </div>
+  </nav>
+  </header>
+</body>
+<main>
+  <section class="results-header">
+    <h1>Adote um cachorro :)</h1>
+    <div class="results-header__option">
+      <div class="option__button option--grid selected"><span></span><span></span><span></span><span></span><span>Grid</span></div>
+      <div class="option__button option--list"><span></span><span></span><span></span><span></span></div>
+    </div>
+  </section>
+  <div class="filter-section__wrapper">
+    <section class="filter-section">
+      <h6>Filtros</h6>
+      <div class="filters">
+        <h5 class="filters__title">Idade</h5>
+        <div class="filters__item">
+          <div class="checkbox">
+            <input id="checkbox-1" type="checkbox"/>
+            <label for="checkbox-1">Filhote<span class="box"></span>
+              <div class="tooltip top" data-tooltip="Younger than 18 months."><span><i class="icon-info"></i></span></div>
+            </label>
+          </div><span class="badge status-primary">10</span>
+        </div>
+        <div class="filters__item">
+          <div class="checkbox">
+            <input id="checkbox-2" type="checkbox" checked="checked"/>
+            <label for="checkbox-2">Jovem<span class="box"></span></label>
+          </div><span class="badge status-primary">5</span>
+        </div>
+        <div class="filters__item">
+          <div class="checkbox">
+            <input id="checkbox-3" type="checkbox"/>
+            <label for="checkbox-3">Adulto<span class="box"></span></label>
+          </div><span class="badge status-primary">20</span>
+        </div>
+        <div class="filters__item">
+          <div class="checkbox">
+            <input id="checkbox-4" type="checkbox"/>
+            <label for="checkbox-4">Senior<span class="box"></span></label>
+          </div><span class="badge status-primary">8</span>
+        </div>
+      </div>
+      <div class="filters">
+        <h5 class="filters__title">Tamanho</h5>
+        <div class="filters__item">
+          <div class="checkbox">
+            <input id="checkbox-5" type="checkbox"/>
+            <label for="checkbox-5">Pequeno<span class="box"></span></label>
+          </div><span class="badge status-primary">9</span>
+        </div>
+        <div class="filters__item">
+          <div class="checkbox">
+            <input id="checkbox-6" type="checkbox" checked="checked"/>
+            <label for="checkbox-6">Médio<span class="box"></span></label>
+          </div><span class="badge status-primary">12</span>
+        </div>
+        <div class="filters__item">
+          <div class="checkbox">
+            <input id="checkbox-7" type="checkbox"/>
+            <label for="checkbox-7">Grande<span class="box"></span></label>
+          </div><span class="badge status-primary">17</span>
+        </div>
+        <div class="filters__item">
+          <div class="checkbox">
+            <input id="checkbox-8" type="checkbox"/>
+            <label for="checkbox-8">Muito grande<span class="box"></span></label>
+          </div><span class="badge status-primary">3</span>
+        </div>
+      </div>
+    </section>
+  </div>
+  <section class="results-section results--grid">
+    <div class="profile">
+      <div class="profile__image"><img src="https://i0.statig.com.br/bancodeimagens/2f/ym/i8/2fymi85z5vo5pcl5rsnsr3xgi.jpg" alt="Doggo"/></div>
+      <div class="profile__info">
+        <h3>Cachorro Caramelo</h3>
+        <p class="profile__info__extra">Um bom amigo que está esperando por um dono amoroso e muito carinhoso para brincar!</p>
+      </div>
+      <div class="profile__stats">
+        <p class="profile__stats__title">Tipo</p>
+        <h5 class="profile__stats__info">Jovem</h5>
+      </div>
+      <div class="profile__stats">
+        <p class="profile__stats__title">Tamanho</p>
+        <h5>Médio</h5>
+      </div>
+      <div class="profile__stats">
+        <p class="profile__stats__title">Peso</p>
+        <h5 class="profile__stats__info">25kg</h5>
+      </div>
+      <div class="profile__cta"><a href="https://forms.office.com/r/nm1yyLGeBm" class="button">Adote um dog!</a></div>
+    </div>
+    <div class="profile">
+      <div class="profile__image"><img src="https://media.istockphoto.com/id/475784958/pt/foto/buldogue-ingl%C3%AAs-sentado-no-skate-na-rua.jpg?s=612x612&w=0&k=20&c=hcLUqkMe6x63KF1KaR5e5wOEWmws_A_UtG65W6RAkv4=" alt="Doggo"/></div>
+      <div class="profile__info">
+        <h3>Buldogue do Skate</h3>
+        <p class="profile__info__extra">Se você gosta de esporte e de andar pelas ruas se aventurando, esse é o cachorro certo para você adotar!</p>
+      </div>
+      <div class="profile__stats">
+        <p class="profile__stats__title">Tipo</p>
+        <h5 class="profile__stats__info">Jovem</h5>
+      </div>
+      <div class="profile__stats">
+        <p class="profile__stats__title">Jovem</p>
+        <h5>Médio</h5>
+      </div>
+      <div class="profile__stats">
+        <p class="profile__stats__title">Peso</p>
+        <h5 class="profile__stats__info">30Kg</h5>
+      </div>
+      <div class="profile__cta"><a href="https://m.facebook.com/DPA.Guarapuava/?locale=pt_BR" class="button">Adote um dog!</a></div>
+    </div>
+    <div class="profile">
+      <div class="profile__image"><img src="https://img.freepik.com/fotos-premium/cachorro-beagle-encantador-na-rua-no-verao_231474-1552.jpg" alt="Doggo"/></div>
+      <div class="profile__info">
+        <h3>Beagle das ruas</h3>
+        <p class="profile__info__extra">Ele está esperando por um lar amoroso e quentinho para os dias de frio e de chuva.</p>
+      </div>
+      <div class="profile__stats">
+        <p class="profile__stats__title">Tipo</p>
+        <h5 class="profile__stats__info">Filhote</h5>
+      </div>
+      <div class="profile__stats">
+        <p class="profile__stats__title">Tamanho</p>
+        <h5>Pequeno</h5>
+      </div>
+      <div class="profile__stats">
+        <p class="profile__stats__title">Peso</p>
+        <h5 class="profile__stats__info">10Kg</h5>
+      </div>
+      <div class="profile__cta"><a href="https://m.facebook.com/DPA.Guarapuava/?locale=pt_BR" class="button">Adote um dog!</a></div>
+    </div>
+    <div class="profile">
+      <div class="profile__image"><img src="https://www.portaldodog.com.br/wp-content/uploads/2022/03/Caracteri%CC%81sticas-do-Chihuahua-2.jpg" alt="Doggo"/></div>
+      <div class="profile__info">
+        <h3>Chihuahua</h3>
+        <p class="profile__info__extra">Parece ser inofensivo mas dá a vida pelo seu dono! Adote-o e tenha um segurança fofo.</p>
+      </div>
+      <div class="profile__stats">
+        <p class="profile__stats__title">Tipo</p>
+        <h5 class="profile__stats__info">Filhote</h5>
+      </div>
+      <div class="profile__stats">
+        <p class="profile__stats__title">Tamanho</p>
+        <h5>Pequeno</h5>
+      </div>
+      <div class="profile__stats">
+        <p class="profile__stats__title">Peso</p>
+        <h5 class="profile__stats__info">5Kg</h5>
+      </div>
+      <div class="profile__cta"><a href="https://m.facebook.com/DPA.Guarapuava/?locale=pt_BR" class="button">Adote um dog!</a></div>
+    </div>
+    <div class="profile">
+      <div class="profile__image"><img src="https://media.istockphoto.com/id/531047000/pt/foto/branco-bullterrier.jpg?s=612x612&w=0&k=20&c=rq0dAfUgNqlSILOZooeQ14QYyDL5TrQbMAsyI5XBo-E=" alt="Doggo"/></div>
+      <div class="profile__info">
+        <h3>Bull terrier</h3>
+        <p class="profile__info__extra">Esse cachorro muito engraçado está te esperando para alegrar seu dia.</p>
+      </div>
+      <div class="profile__stats">
+        <p class="profile__stats__title">Tipo</p>
+        <h5 class="profile__stats__info">Adulto</h5>
+      </div>
+      <div class="profile__stats">
+        <p class="profile__stats__title">Tamanho</p>
+        <h5>Grande</h5>
+      </div>
+      <div class="profile__stats">
+        <p class="profile__stats__title">Peso</p>
+        <h5 class="profile__stats__info">45Kg</h5>
+      </div>
+      <div class="profile__cta"><a href="https://m.facebook.com/DPA.Guarapuava/?locale=pt_BR" class="button">Adote um dog!</a></div>
+    </div>
+    <div class="profile">
+      <div class="profile__image"><img src="https://petcompleto.com.br/wp-content/uploads/2023/12/rsw_1280-4-768x432.webp" alt="Doggo"/></div>
+      <div class="profile__info">
+        <h3>Cachorro Caramelo</h3>
+        <p class="profile__info__extra">O Caramelo está te aguardando para ter um lar agradável.</p>
+      </div>
+      <div class="profile__stats">
+        <p class="profile__stats__title">Tipo</p>
+        <h5 class="profile__stats__info">Jovem</h5>
+      </div>
+      <div class="profile__stats">
+        <p class="profile__stats__title">Tamanho</p>
+        <h5>Médio</h5>
+      </div>
+      <div class="profile__stats">
+        <p class="profile__stats__title">Peso</p>
+        <h5 class="profile__stats__info">25Kg</h5>
+      </div>
+      <div class="profile__cta"><a href="https://m.facebook.com/DPA.Guarapuava/?locale=pt_BR" class="button">Adote um dog!</a></div>
+</main>
+<footer>
+  <div class="explanation">Site desenvolvido por  <a  target="_blank">Anthony Jinkings e Pedro Trindade</a>.</div>
+  <div class="social"><a href="https://twitter.com/meowlivia_" target="_blank"><i class="icon-social-twitter icons"></i></a><a href="https://github.com/oliviale" target="_blank"><i class="icon-social-github icons"></i></a><a href="https://dribbble.com/oliviale" target="_blank"><i class="icon-social-dribbble icons"></i></a></div>
+</footer>
